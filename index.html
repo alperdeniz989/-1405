@@ -1,8 +1,139 @@
-<div class="text">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h3 style="text-align:center; font-weight:normal;">
+<title>کتاب‌های حسین اقبالیان</title>
+
+<style>
+body {
+    margin: 0;
+    background: #eee8dc;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #222;
+}
+
+.book {
+    max-width: 750px;
+    min-height: 100vh;
+    margin: auto;
+    background: #fffdf8;
+    padding: 40px 25px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    margin-top: 80px;
+    font-size: 32px;
+}
+
+.author {
+    text-align: center;
+    color: #777;
+    margin: 20px 0 60px;
+    font-size: 18px;
+}
+
+.chapter {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: #f0ebe1;
+    font-family: inherit;
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.chapter:hover {
+    background: #e5ded1;
+}
+
+.reader {
+    display: none;
+}
+
+.reader h2 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 2.5;
+    text-align: justify;
+}
+
+.text p {
+    margin-bottom: 25px;
+}
+
+.back {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 30px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back:hover {
+    background: #444;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 45px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="book">
+
+<div id="menu">
+
+<h1>کتاب من</h1>
+
+<div class="author">
+نویسنده: حسین اقبالیان
+</div>
+
+<h2>فهرست مطالب</h2>
+
+<button class="chapter" onclick="openChapter(1)">
 فراموشی
-</h3>
+</button>
+
+<button class="chapter" onclick="openChapter(2)">
+فصل دوم
+</button>
+
+<button class="chapter" onclick="openChapter(3)">
+فصل سوم
+</button>
+
+</div>
+
+
+<div class="reader" id="chapter1">
+
+<h2>فراموشی</h2>
+
+<div class="text">
 
 <p>
 قلبم را اگر تکه تکه هم بکنند تمام آنرا برای تو میدهم چون بی تو قلبم مثل یک اتاق خالی است که چیزی در آن برای دیدن یا حتی شنیدن ندارد.
@@ -143,3 +274,83 @@
 </p>
 
 </div>
+
+<button class="back" onclick="backToMenu()">
+بازگشت به فهرست
+</button>
+
+</div>
+
+
+<div class="reader" id="chapter2">
+
+<h2>فصل دوم</h2>
+
+<div class="text">
+
+<p>
+متن فصل دوم بعداً در این قسمت قرار می‌گیرد.
+</p>
+
+</div>
+
+<button class="back" onclick="backToMenu()">
+بازگشت به فهرست
+</button>
+
+</div>
+
+
+<div class="reader" id="chapter3">
+
+<h2>فصل سوم</h2>
+
+<div class="text">
+
+<p>
+متن فصل سوم بعداً در این قسمت قرار می‌گیرد.
+</p>
+
+</div>
+
+<button class="back" onclick="backToMenu()">
+بازگشت به فهرست
+</button>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+function openChapter(number) {
+
+    document.getElementById("menu").style.display = "none";
+
+    document.getElementById("chapter1").style.display = "none";
+    document.getElementById("chapter2").style.display = "none";
+    document.getElementById("chapter3").style.display = "none";
+
+    document.getElementById("chapter" + number).style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+function backToMenu() {
+
+    document.getElementById("chapter1").style.display = "none";
+    document.getElementById("chapter2").style.display = "none";
+    document.getElementById("chapter3").style.display = "none";
+
+    document.getElementById("menu").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+</script>
+
+</body>
+</html>
