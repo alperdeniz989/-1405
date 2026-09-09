@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کتاب من</title>
+
+<style>
+body {
+    margin: 0;
+    background: #eee8dc;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #222;
+}
+
+.book {
+    max-width: 750px;
+    min-height: 100vh;
+    margin: auto;
+    background: #fffdf8;
+    padding: 40px 25px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    margin-top: 80px;
+}
+
+.author {
+    text-align: center;
+    color: #777;
+    margin: 20px 0 60px;
+}
+
+.chapter {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: #f0ebe1;
+    font-family: inherit;
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.reader {
+    display: none;
+}
+
+.reader h2 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 2.5;
+    text-align: justify;
+}
+
+.back {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 30px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+}
+</style>
+</head>
+
+<body>
+
+<div class="book">
+
+<div id="menu">
+
+<h1>کتاب من</h1>
+
+<div class="author">
+نویسنده: حسین اقبالیان
+</div>
+
+<h2>فهرست مطالب</h2>
+
+<button class="chapter" onclick="openChapter(1)">
+فصل اول
+</button>
+
+<button class="chapter" onclick="openChapter(2)">
+فصل دوم
+</button>
+
+<button class="chapter" onclick="openChapter(3)">
+فصل سوم
+</button>
+
+</div>
+
+
+<div class="reader" id="chapter1">
+
+<h2>فصل اول</h2>
+
+<div class="text">
+<p>
+متن فصل اول اینجا قرار می‌گیرد.
+</p>
+</div>
+
+<button class="back" onclick="backToMenu()">
+بازگشت به فهرست
+</button>
+
+</div>
+
+
+<div class="reader" id="chapter2">
+
+<h2>فصل دوم</h2>
+
+<div class="text">
+<p>
+متن فصل دوم اینجا قرار می‌گیرد.
+</p>
+</div>
+
+<button class="back" onclick="backToMenu()">
+بازگشت به فهرست
+</button>
+
+</div>
+
+
+<div class="reader" id="chapter3">
+
+<h2>فصل سوم</h2>
+
+<div class="text">
+<p>
+متن فصل سوم اینجا قرار می‌گیرد.
+</p>
+</div>
+
+<button class="back" onclick="backToMenu()">
+بازگشت به فهرست
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openChapter(number) {
+
+    document.getElementById("menu").style.display = "none";
+
+    document.getElementById("chapter1").style.display = "none";
+    document.getElementById("chapter2").style.display = "none";
+    document.getElementById("chapter3").style.display = "none";
+
+    document.getElementById("chapter" + number).style.display = "block";
+}
+
+function backToMenu() {
+
+    document.getElementById("chapter1").style.display = "none";
+    document.getElementById("chapter2").style.display = "none";
+    document.getElementById("chapter3").style.display = "none";
+
+    document.getElementById("menu").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
