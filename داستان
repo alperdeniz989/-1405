@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کتاب من</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f5f1e8;
+            font-family: sans-serif;
+            color: #222;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .book {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,.1);
+            line-height: 2;
+            min-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>کتاب من</h1>
+
+    <div class="book">
+        <p>
+            متن کتاب در این قسمت قرار می‌گیرد.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
